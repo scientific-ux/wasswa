@@ -1,0 +1,215 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'segoe UI', sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Header / Hero */
+
+.hero {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.profile-img {
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.1) rotate(2deg);
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    margin: 10px 0;
+}
+
+.hero span {
+    color: #ffd700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+/* Sections */
+section {
+    margin-top: 40px;
+}
+
+section h2 {
+    color: #1e3c72;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+section ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+section ul li ::before {
+    content: ".";
+    color: #1e3c72;
+    margin-right: 8px;
+}
+
+/* Links */
+a {
+    color: #1e3c72;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffd700;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* Animation on Scroll */
+.animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Image Intro Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    } 
+    
+    .hero-text h1 {
+        font-size: 1.6em;
+    }
+}
+
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: white;
+    background: #222;
+    padding: 12px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    display: inline-flex;
+    text-decoration: none;
+}
+
+/* TikTok: neutral black backgroung */
+.social-links .tiktok {
+    background: black;
+}
+
+.social-links .tiktok:hover {
+    background: #333;
+}
+
+/* Instagram: pink background */
+.social-links .instagram {
+    background: #E1306C;
+}
+
+.social-links .instagram:hover {
+    background: #C2185B;
+}
+
+.social-links i {
+    font-size: 24px;
+}
+
+@media screen and (max-width:768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    header img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    .container, .section {
+        padding: 10px;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
